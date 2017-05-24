@@ -1,4 +1,7 @@
-import { Component }      from '@angular/core';
+import { Component, OnInit }      from '@angular/core';
+import { Contact } from '../../models/contact';
+import { ListService } from '../../services/list.service';
+import { Router } from '@angular/router';
 
 declare const __moduleName: string;
 
@@ -10,5 +13,18 @@ declare const __moduleName: string;
 })
 
 export class ListComponent {
-  constructor() {}
+  listContact: Contact[] = [];
+
+  constructor(
+    private listService: ListService,
+    private router: Router
+  ) {}
+
+  ngOnInit() {
+    this.listContact = this.listService.getListDefault();
+  }
+
+  goToProfile() {
+    this.router.navigateByUrl('/profile');
+  }
 }

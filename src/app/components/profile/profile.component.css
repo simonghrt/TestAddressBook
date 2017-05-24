@@ -1,0 +1,17 @@
+.profile-container {
+  margin:auto;
+  background-color: #fff;
+  padding: 20px;
+  width: 250px;
+  height: 130px;
+}
+
+.contact-icons {
+  margin-top: 15px;
+}
+
+.contact-icons button {
+  border: none;
+  background: none;
+  margin: 0 3px;
+}

@@ -1,1 +1,18 @@
-Hey guys !!
+<div class="text-center list-container">
+  <ng-container *ngFor="let contact of listContact; let i = index;">
+    <div class="contact col-md-4 col-sm-6">
+      <div class="row content-contact">
+        <div (click)="goToProfile()">
+          <div class="col-xs-4">
+            <i class="fa fa-user-circle-o fa-3x"></i>
+          </div>
+          <div class="col-xs-6">
+            <span>{{contact.firstName}} {{contact.lastName}}</span>
+            <br />
+            <span>{{contact.phoneNumber}}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </ng-container>
+</div>

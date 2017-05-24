@@ -7,6 +7,8 @@ import { AppComponent } from './app.component';
 import { ListComponent } from './components/list/list.component';
 import { ProfileComponent } from './components/profile/profile.component';
 
+import { ListService } from './services/list.service';
+
 import { AppRoutingModule }     from './app-routing.module';
 
 @NgModule({
@@ -21,7 +23,9 @@ import { AppRoutingModule }     from './app-routing.module';
     HttpModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [
+    ListService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,0 +1,21 @@
+<div class="text-center profile-container">
+  <div class="row">
+    <div class="profile-contact">
+      <div class="col-xs-5">
+        <i class="fa fa-user-circle-o fa-3x"></i>
+      </div>
+      <div class="col-xs-7">
+        <span>{{contact.firstName}} {{contact.lastName}}</span>
+        <br />
+        <span>{{contact.phoneNumber}}</span>
+      </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-xs-12 contact-icons">
+      <button><a [href]="contact.skypeUrl"><i class="fa fa-skype fa-lg"></i></a></button>
+      <button><a [href]="contact.linkedinUrl"><i class="fa fa-linkedin fa-lg"></i></a></button>
+      <button><a [href]="'mailto: ' + contact.mail"><i class="fa fa-envelope fa-lg"></i></a></button>
+    </div>
+  </div>
+</div>
